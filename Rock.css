@@ -1,0 +1,12 @@
+.Rock,.Paper,.Scissors
+{
+    border-radius: 90px;
+    padding: 10px;
+    border: 2px solid black;
+    cursor: pointer;
+}
+img{
+    width: 40px;
+    height:auto;
+    border: none;
+}
