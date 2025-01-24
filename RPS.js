@@ -49,3 +49,22 @@ function resetGame() {
     document.querySelector('.chosen').innerHTML = '';
     updateScoreDisplay();
 }
+let isAutoPlay=false;
+let interval;
+
+
+function Autoplay() {
+    const button = document.querySelector('.AutoPlay'); // Updated selector
+    if (!isAutoPlay) {
+        button.innerHTML = 'Stop Play'; // Correct label for stopping autoplay
+        interval = setInterval(function() {
+            checkWhoWin(genCompMove());
+        }, 1000);
+        isAutoPlay = true;
+    } else {
+        clearInterval(interval);
+        isAutoPlay = false;
+        button.innerHTML = 'Auto Play'; // Correct label for starting autoplay
+    }
+}
+
